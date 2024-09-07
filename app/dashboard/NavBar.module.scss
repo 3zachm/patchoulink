@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+  padding: 0 2rem;
+}
+
+.nav h1 {
+  user-select: none;
+}
+
+.account {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
