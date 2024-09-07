@@ -1,76 +1,131 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+:root,
+:root[data-theme="light"] {
+  --cr-text-50: rgb(244, 236, 249);
+  --cr-text-100: rgb(233, 216, 243);
+  --cr-text-200: rgb(211, 177, 231);
+  --cr-text-300: rgb(189, 139, 218);
+  --cr-text-400: rgb(167, 100, 206);
+  --cr-text-500: rgb(145, 61, 194);
+  --cr-text-600: rgb(116, 49, 155);
+  --cr-text-700: rgb(87, 37, 116);
+  --cr-text-800: rgb(58, 24, 78);
+  --cr-text-900: rgb(29, 12, 39);
+  --cr-text-950: rgb(15, 6, 19);
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --cr-bg-50: rgb(242, 237, 247);
+  --cr-bg-100: rgb(230, 219, 240);
+  --cr-bg-200: rgb(204, 184, 224);
+  --cr-bg-300: rgb(178, 148, 209);
+  --cr-bg-400: rgb(153, 112, 194);
+  --cr-bg-500: rgb(127, 77, 179);
+  --cr-bg-600: rgb(102, 61, 143);
+  --cr-bg-700: rgb(76, 46, 107);
+  --cr-bg-800: rgb(51, 31, 71);
+  --cr-bg-900: rgb(25, 15, 36);
+  --cr-bg-950: rgb(13, 8, 18);
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  --cr-primary-50: rgb(245, 236, 249);
+  --cr-primary-100: rgb(236, 216, 243);
+  --cr-primary-200: rgb(216, 178, 230);
+  --cr-primary-300: rgb(197, 139, 218);
+  --cr-primary-400: rgb(177, 101, 205);
+  --cr-primary-500: rgb(158, 62, 193);
+  --cr-primary-600: rgb(126, 50, 154);
+  --cr-primary-700: rgb(95, 37, 116);
+  --cr-primary-800: rgb(63, 25, 77);
+  --cr-primary-900: rgb(32, 12, 39);
+  --cr-primary-950: rgb(16, 6, 19);
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+  --cr-secondary-50: rgb(249, 236, 246);
+  --cr-secondary-100: rgb(243, 216, 236);
+  --cr-secondary-200: rgb(230, 178, 218);
+  --cr-secondary-300: rgb(218, 139, 199);
+  --cr-secondary-400: rgb(205, 101, 181);
+  --cr-secondary-500: rgb(193, 62, 162);
+  --cr-secondary-600: rgb(154, 50, 130);
+  --cr-secondary-700: rgb(116, 37, 97);
+  --cr-secondary-800: rgb(77, 25, 65);
+  --cr-secondary-900: rgb(39, 12, 32);
+  --cr-secondary-950: rgb(19, 6, 16);
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --cr-accent-50: rgb(249, 236, 243);
+  --cr-accent-100: rgb(243, 216, 230);
+  --cr-accent-200: rgb(231, 177, 206);
+  --cr-accent-300: rgb(218, 139, 181);
+  --cr-accent-400: rgb(206, 100, 157);
+  --cr-accent-500: rgb(194, 61, 132);
+  --cr-accent-600: rgb(155, 49, 106);
+  --cr-accent-700: rgb(116, 37, 79);
+  --cr-accent-800: rgb(78, 24, 53);
+  --cr-accent-900: rgb(39, 12, 26);
+  --cr-accent-950: rgb(19, 6, 13);
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+:root[data-theme="dark"] {
+  --cr-text-50: rgb(15, 6, 19);
+  --cr-text-100: rgb(29, 12, 39);
+  --cr-text-200: rgb(58, 24, 78);
+  --cr-text-300: rgb(87, 37, 116);
+  --cr-text-400: rgb(116, 49, 155);
+  --cr-text-500: rgb(145, 61, 194);
+  --cr-text-600: rgb(167, 100, 206);
+  --cr-text-700: rgb(189, 139, 218);
+  --cr-text-800: rgb(211, 177, 231);
+  --cr-text-900: rgb(233, 216, 243);
+  --cr-text-950: rgb(244, 236, 249);
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+  --cr-bg-50: rgb(13, 8, 18);
+  --cr-bg-100: rgb(25, 15, 36);
+  --cr-bg-200: rgb(51, 31, 71);
+  --cr-bg-300: rgb(76, 46, 107);
+  --cr-bg-400: rgb(102, 61, 143);
+  --cr-bg-500: rgb(127, 77, 179);
+  --cr-bg-600: rgb(153, 112, 194);
+  --cr-bg-700: rgb(178, 148, 209);
+  --cr-bg-800: rgb(204, 184, 224);
+  --cr-bg-900: rgb(230, 219, 240);
+  --cr-bg-950: rgb(242, 237, 247);
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+  --cr-primary-50: rgb(16, 6, 19);
+  --cr-primary-100: rgb(32, 12, 39);
+  --cr-primary-200: rgb(63, 25, 77);
+  --cr-primary-300: rgb(95, 37, 116);
+  --cr-primary-400: rgb(126, 50, 154);
+  --cr-primary-500: rgb(158, 62, 193);
+  --cr-primary-600: rgb(177, 101, 205);
+  --cr-primary-700: rgb(197, 139, 218);
+  --cr-primary-800: rgb(216, 178, 230);
+  --cr-primary-900: rgb(236, 216, 243);
+  --cr-primary-950: rgb(245, 236, 249);
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+  --cr-secondary-50: rgb(19, 6, 16);
+  --cr-secondary-100: rgb(39, 12, 32);
+  --cr-secondary-200: rgb(77, 25, 65);
+  --cr-secondary-300: rgb(116, 37, 97);
+  --cr-secondary-400: rgb(154, 50, 130);
+  --cr-secondary-500: rgb(193, 62, 162);
+  --cr-secondary-600: rgb(205, 101, 181);
+  --cr-secondary-700: rgb(218, 139, 199);
+  --cr-secondary-800: rgb(230, 178, 218);
+  --cr-secondary-900: rgb(243, 216, 236);
+  --cr-secondary-950: rgb(249, 236, 246);
+
+  --cr-accent-50: rgb(19, 6, 13);
+  --cr-accent-100: rgb(39, 12, 26);
+  --cr-accent-200: rgb(78, 24, 53);
+  --cr-accent-300: rgb(116, 37, 79);
+  --cr-accent-400: rgb(155, 49, 106);
+  --cr-accent-500: rgb(194, 61, 132);
+  --cr-accent-600: rgb(206, 100, 157);
+  --cr-accent-700: rgb(218, 139, 181);
+  --cr-accent-800: rgb(231, 177, 206);
+  --cr-accent-900: rgb(243, 216, 230);
+  --cr-accent-950: rgb(249, 236, 243);
+}
+
+:root {
+  --nav-height: 3rem;
 }
 
 * {
@@ -82,26 +137,10 @@
 html,
 body {
   max-width: 100vw;
+  min-height: 100lvh;
+  min-height: 100vh;
   overflow-x: hidden;
+  color: var(--cr-text-950);
+  background-color: var(--cr-bg-50);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

@@ -15,6 +15,9 @@ async function resolveCode(code: string) {
 export async function GET(request: NextRequest, { params }: { params: { shortCode: string }}) {
     const resolvedURL = await resolveCode(params.shortCode);
     if (!resolvedURL) {
+        if (params.shortCode.endsWith('+')) {
+            return NextResponse.redirect(new URL(`/${params.shortCode.slice(0, -1)}/+`, request.nextUrl));
+        }
         return NextResponse.redirect(new URL('/404', request.nextUrl));
     }
     // register hit

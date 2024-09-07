@@ -1,4 +1,4 @@
-interface Hit {
+interface  Hit {
     code: string, // reference
     timestamp: Date,
     agent?: string | undefined,
